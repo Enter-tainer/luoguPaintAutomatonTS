@@ -1,6 +1,6 @@
-import Base32Image from "classes/Base32Image";
-import PPMImage from "classes/PPMImage";
-import getMatchedColor from "utils/getMatchedColor";
+import Base32Image from "../classes/Base32Image";
+import PPMImage from "../classes/PPMImage";
+import getMatchedColor from "../utils/getMatchedColor";
 
 function ppm2Base32(image: PPMImage): Base32Image {
   const res: string[][] = new Array(image.y);
@@ -13,3 +13,5 @@ function ppm2Base32(image: PPMImage): Base32Image {
   }
   return new Base32Image(res.map((v) => v.join("")));
 }
+
+export default ppm2Base32;
