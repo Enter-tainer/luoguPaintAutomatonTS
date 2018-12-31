@@ -12,7 +12,7 @@ async function getTasks(image: Base32Image, [x, y]: Point2d): Promise<ITask[]> {
   const resArray: ITask[] = [];
   for (let i = 0; i < image.y; ++i) { // 横坐标 i \in [0, image.y)
     for (let j = 0; j < image.x; ++j) { // 纵坐标 j \in [0, image.x]
-      if (board[i + y][j + x] !== image.data[i][j]) {
+      if (board[j + x][i + y] !== image.data[i][j]) {
         resArray.push({
           color: image.data[i][j],
           point: [j + x, i + y],
