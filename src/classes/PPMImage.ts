@@ -20,12 +20,9 @@ class PPMImage {
       for (let j = 0; j < this.x; ++j) {
         for (let k = 0; k < 3; ++k) {
           this.data[i][j][k] = Number(lines[lineCnt]);
-          console.log(this.data[i][j][k], Number(lines[lineCnt]));
           ++lineCnt;
         }
-        console.log();
       }
-      console.log(this.data[i]);
     }
   }
 }

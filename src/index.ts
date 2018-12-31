@@ -8,8 +8,8 @@ import ppm2Base32 from "./utils/ppm2Base32";
 import { getTime, sleep } from "./utils/timeUtils";
 
 const users = readUsers("../data/users.json");
-// const image = readBase32Image("../data/test.32");
-const image = ppm2Base32(readPPMImage("../data/test.ppm"));
+const image = readBase32Image("../data/test.32");
+// const image = ppm2Base32(readPPMImage("../data/test.ppm"));
 
 console.log("Users: ", users, "\n\n");
 console.log("Image: ", image, "\n\n");
