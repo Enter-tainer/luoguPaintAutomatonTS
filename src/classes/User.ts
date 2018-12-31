@@ -15,7 +15,7 @@ class User {
     const [x, y] = point;
     const j = request.jar();
     const cookie = request.cookie(
-      `__client_id=${this.cookie.clientID}; _uid=${this.cookie.UID}; UM_distinctid=${this.cookie.UMID}`,
+      `__client_id=${this.cookie.clientID}; _uid=${this.cookie.UID}`,
     );
     const url = "https://www.luogu.org/paintBoard/paint";
     const res = JSON.parse(await request.post({

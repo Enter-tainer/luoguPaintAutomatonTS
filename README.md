@@ -36,8 +36,7 @@ node index.js
   "users": [
     {
       "UID": "",
-      "clientID": "",
-      "UMID": ""
+      "clientID": ""
     }
   ]
 }
