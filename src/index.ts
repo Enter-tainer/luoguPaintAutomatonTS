@@ -26,7 +26,7 @@ async function paint() {
       console.log("Tasks: ", tasks, "\n\n");
       console.log("Paint logs:");
     }
-    if (getTime() - users[0].lastPaintTime <= 30 * 1000) {
+    if (getTime() - users[0].lastPaintTime <= 31 * 1000) {
       await sleep(30 * 1000 - (getTime() - users[0].lastPaintTime));
     }
     users[0].lastPaintTime = getTime();
