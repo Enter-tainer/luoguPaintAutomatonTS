@@ -1,10 +1,8 @@
 import User from "./classes/User";
 import ITask from "./interfaces/Tasks";
 import readBase32Image from "./io/readBase32Image";
-import readPPMImage from "./io/readPPMImage";
 import readUsers from "./io/readUsers";
 import getTasks from "./utils/getTasks";
-import ppm2Base32 from "./utils/ppm2Base32";
 import { getTime, sleep } from "./utils/timeUtils";
 
 const users = readUsers("../data/users.json");
@@ -17,7 +15,7 @@ console.log("Image: ", image, "\n\n");
 let tasks: ITask[] = [];
 
 async function updateTasks() {
-  return await getTasks(image, [688, 194]);
+  return await getTasks(image, [245, 185]);
 }
 
 async function paint() {
