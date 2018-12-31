@@ -6,6 +6,7 @@ import getTasks from "./utils/getTasks";
 
 const users = readUsers("../data/users.json");
 const image = readBase32Image("../data/test.32");
+console.log(users);
 console.log(image);
 let tasks: ITask[] = [];
 
