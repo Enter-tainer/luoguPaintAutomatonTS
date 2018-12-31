@@ -7,8 +7,10 @@ import { getTime, sleep } from "./utils/timeUtils";
 
 const users = readUsers("../data/users.json");
 const image = readBase32Image("../data/test.32");
-console.log(users);
-console.log(image);
+
+console.log("Users: ", users, "\n\n");
+console.log("Image: ", image, "\n\n");
+
 let tasks: ITask[] = [];
 
 async function updateTasks() {
@@ -20,7 +22,8 @@ async function paint() {
     if (tasks.length === 0) {
       await sleep(1000);
       tasks = await updateTasks();
-      console.log(tasks);
+      console.log("Tasks: ", tasks, "\n\n");
+      console.log("Paint logs:");
     }
     if (getTime() - users[0].lastPaintTime <= 30 * 1000) {
       await sleep(30 * 1000 - (getTime() - users[0].lastPaintTime));
