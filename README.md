@@ -29,6 +29,8 @@ node index.js
 
 图片用luogu绘版所使用的32进制数表示，保存在 `data/test.32` 中，需确保图片为矩形。
 
+也可以使用 `convert.cpp` 将 ppm 格式的图片转换成 .32 格式，具体使用方法请自行 review 代码。
+
 请将 cookies 放置在 `data/users.json` 中，以下是一个 `data/users.json` 的示例：
 
 ``` json
@@ -43,7 +45,3 @@ node index.js
 ```
 
 在 `index.ts` 中可以调整图片左上角坐标
-
-## TODO:
-
-兼容 ppm 图片
