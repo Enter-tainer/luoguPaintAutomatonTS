@@ -13,14 +13,13 @@ class User {
   }
   public async paint({ point, color }: ITask) {
     const [x, y] = point;
-    const j = request.jar();
     const cookie = request.cookie(
       `__client_id=${this.cookie.clientID}; _uid=${this.cookie.UID}`,
     );
     const url = "https://www.luogu.org/paintBoard/paint";
     const res = JSON.parse(await request.post({
       form: {
-        color,
+        color: parseInt(color, 32),
         x,
         y,
       },
