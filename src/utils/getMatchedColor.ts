@@ -12,19 +12,20 @@ const RGBBaseColor: Point3d[] = [
 ];
 const HSLBaseColor: Point3d[] =
     RGBBaseColor.map(([rr, gg, bb]) => convet.rgb.hsl(rr, gg, bb));
+const transStr = "0123456789abcdefghijklmnopqrstuv";
 
 function getSquaredDistance([x1, y1, z1]: Point3d, [x2, y2, z2]: Point3d): number {
   return Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + Math.pow(z1 - z2, 2);
 }
-function getMatchedColorIndex([r, g, b]: Point3d) {
+function getMatchedColorIndex([r, g, b]: Point3d): string {
   const p1: Point3d = convet.rgb.hsl(r, g, b);
   const minValue = HSLBaseColor.map((p) => getSquaredDistance(p, p1)).sort()[0];
   for (let i = 0; i < HSLBaseColor.length; ++i) {
     if (getSquaredDistance(p1, HSLBaseColor[i]) === minValue) {
-      return i;
+      return transStr[i];
     }
   }
-  return -1;
+  return "0";
 }
 
 export default getMatchedColorIndex;
