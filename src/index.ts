@@ -15,7 +15,7 @@ console.log("Image: ", image, "\n\n");
 let tasks: ITask[] = [];
 
 async function updateTasks() {
-  return await getTasks(image, [249, 189]);
+  return await getTasks(image, [530, 31]);
 }
 
 async function paint() {
