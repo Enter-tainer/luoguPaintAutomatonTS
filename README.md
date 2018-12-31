@@ -29,4 +29,4 @@ node index.js
 
 请将 cookies 放置在 `users.json` 中
 
-在 `index.tx` 中可以调整图片左上角坐标
+在 `index.ts` 中可以调整图片左上角坐标
