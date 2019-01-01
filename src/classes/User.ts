@@ -32,7 +32,7 @@ class User {
     if (res.status !== 200) {
       console.error(this.cookie.UID, res);
     } else {
-      console.info(this.cookie.UID, point, color, "success");
+      console.info(this.cookie.UID, point, color, "success", (new Date().toLocaleTimeString()));
     }
   }
 }

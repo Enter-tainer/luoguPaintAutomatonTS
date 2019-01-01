@@ -15,7 +15,7 @@ console.log("Image: ", image, "\n\n");
 let tasks: ITask[] = [];
 
 async function updateTasks() {
-  return await getTasks(image, [530, 31]);
+  return await getTasks(image, [402, 226]);
 }
 
 async function paint() {
@@ -25,12 +25,15 @@ async function paint() {
       tasks = await updateTasks();
       console.log("Tasks: ", tasks, "\n\n");
       console.log("Paint logs:");
+      if (tasks.length === 0) {
+        continue;
+      }
     }
     if (getTime() - users[0].lastPaintTime <= 31 * 1000) {
       await sleep(31 * 1000 - (getTime() - users[0].lastPaintTime));
     }
+    await users[0].paint(tasks[0]);
     users[0].lastPaintTime = getTime();
-    users[0].paint(tasks[0]);
     users.push(users.shift() as User);
     tasks.shift();
   }
