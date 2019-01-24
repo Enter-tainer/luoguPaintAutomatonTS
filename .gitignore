@@ -82,3 +82,6 @@ typings/
 dist/
 
 users.json
+
+# WebStorm
+.idea
