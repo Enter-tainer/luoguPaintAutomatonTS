@@ -1,3 +1,4 @@
+import * as path from "path";
 import User from "./classes/User";
 import ITask from "./interfaces/Tasks";
 import readBase32Image from "./io/readBase32Image";
@@ -5,8 +6,8 @@ import readUsers from "./io/readUsers";
 import getTasks from "./utils/getTasks";
 import { getTime, sleep } from "./utils/timeUtils";
 
-const users = readUsers("../data/users.json");
-const image = readBase32Image("../data/test.32");
+const users = readUsers(path.resolve(__dirname, "../", "data", "users.json"));
+const image = readBase32Image(path.resolve(__dirname, "../", "data", "test.32"));
 // const image = ppm2Base32(readPPMImage("../data/test.ppm"));
 
 console.log("Users: ", users, "\n\n");

@@ -5,8 +5,11 @@
   "license": "ISC",
   "author": "",
   "main": "dist/index.js",
+  "source": "main/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "tslint -c tslint.json src/**/*",
+    "build": "tsc",
+    "serve": "ts-node src/index.ts"
   },
   "dependencies": {
     "@types/node": "^10.12.18",
