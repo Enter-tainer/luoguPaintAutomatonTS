@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@types/request": "^2.48.1",
-    "@types/request-promise-native": "^1.0.15",
+    "@types/request-promise-native": "^1.0.16",
     "tslint": "^5.12.0"
   }
 }
