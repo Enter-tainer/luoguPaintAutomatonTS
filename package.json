@@ -16,7 +16,7 @@
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5",
     "ts-node": "^8.0.1",
-    "typescript": "^3.2.2"
+    "typescript": "^3.5.1"
   },
   "devDependencies": {
     "@types/request": "^2.48.1",
