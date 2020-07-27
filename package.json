@@ -12,7 +12,7 @@
     "serve": "ts-node src/index.ts"
   },
   "dependencies": {
-    "@types/node": "^10.12.18",
+    "@types/node": "^14.0.26",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5",
     "ts-node": "^8.0.1",
